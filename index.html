@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First Respond App</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h3 style="margin: 0px;padding: 0px;text-align: center;">SIMPLE MATH SOLUTIONS</h3>
+        <h6 style="margin: 0px;padding: 0px;text-align: center;">CALCULATE THE EXAMPLE BELOW</h6>
+        <h6 style="margin: 0px;padding: 0px;text-align: center;">OR CUSTOM YOUR'S</h6>
+        <img id="example" src="Example.jpg" alt="" />
+        <hr style="margin: 0px;padding: 0px;height: 2px;background: aqua;"/>
+        <div class="list-view">
+            <div class="list-v-chl">
+                <p style="margin: 0px;padding: 0px;font-size: 10px;text-align: center;color: brown;text-decoration: underline;"><b>MAN</b></p>
+                <img id="man" src="man.jpg" alt="" />
+                <p style="margin: 0px;padding: 0px;font-size: 10px;;color: brown;text-decoration: underline;padding-left: 5px;"><b>MAN</b></p>
+                <div class="one-cell"><input type="number" id="vmanc1" value="0"></input><button id="addone" onclick="addmanc1()">+</button><button id="subone" onclick="submanc1()">-</button></div>
+                <p style="margin: 0px;padding: 0px;font-size: 10px;color: rgb(7, 160, 147);text-decoration: underline;padding-left: 5px;"><b>FACEMASK</b></p>
+                <div class="one-cell"><input type="number" id="vfacemaskc1" value="0"></input><button id="addone" onclick="addfacemaskc1()">+</button><button id="subone" onclick="subfacemaskc1()">-</button></div>
+                <p style="margin: 0px;padding: 0px;font-size: 10px;;color: rgb(73, 64, 64);text-decoration: underline;padding-left: 5px;"><b>ENERGY</b></p>
+                <div class="one-cell"><input type="number" id="venergyc1" value="0"></input><button id="addone" onclick="addenergyc1()">+</button><button id="subone" onclick="subenergyc1()">-</button></div>
+            </div>
+            <div class="list-v-chl">
+                <p style="margin: 0px;padding: 0px;font-size: 10px;text-align: center;color: rgb(7, 160, 147);text-decoration: underline;"><b>FACEMASK</b></p>
+                <img id="facemask" src="facemask.jpg" alt="" />
+                <p style="margin: 0px;padding: 0px;font-size: 10px;;color: brown;text-decoration: underline;padding-left: 5px;"><b>MAN</b></p>
+                <div class="one-cell"><input type="number" id="vmanc2" value="0"></input><button id="addone" onclick="addmanc2()">+</button><button id="subone" onclick="submanc2()">-</button></div>
+                <p style="margin: 0px;padding: 0px;font-size: 10px;color: rgb(7, 160, 147);text-decoration: underline;padding-left: 5px;"><b>FACEMASK</b></p>
+                <div class="one-cell"><input type="number" id="vfacemaskc2" value="0"></input><button id="addone" onclick="addfacemaskc2()">+</button><button id="subone" onclick="subfacemaskc2()">-</button></div>
+                <p style="margin: 0px;padding: 0px;font-size: 10px;;color: rgb(73, 64, 64);text-decoration: underline;padding-left: 5px;"><b>ENERGY</b></p>
+                <div class="one-cell"><input type="number" id="venergyc2" value="0"></input><button id="addone" onclick="addenergyc2()">+</button><button id="subone" onclick="subenergyc2()">-</button></div>
+            </div>
+            <div class="list-v-chl">
+                <p style="margin: 0px;padding: 0px;font-size: 10px;text-align: center;color: rgb(73, 64, 64);text-decoration: underline;"><b>ENERGY</b></p>
+                <img id="energy" src="energy.jpg" alt="" />
+                <p style="margin: 0px;padding: 0px;font-size: 10px;;color: brown;text-decoration: underline;padding-left: 5px;"><b>MAN</b></p>
+                <div class="one-cell"><input type="number" id="vmanc3" value="0"></input><button id="addone" onclick="addmanc3()">+</button><button id="subone" onclick="submanc3()">-</button></div>
+                <p style="margin: 0px;padding: 0px;font-size: 10px;color: rgb(7, 160, 147);text-decoration: underline;padding-left: 5px;"><b>FACEMASK</b></p>
+                <div class="one-cell"><input type="number" id="vfacemaskc3" value="0"></input><button id="addone" onclick="addfacemaskc3()">+</button><button id="subone" onclick="subfacemaskc3()">-</button></div>
+                <p style="margin: 0px;padding: 0px;font-size: 10px;;color: rgb(73, 64, 64);text-decoration: underline;padding-left: 5px;"><b>ENERGY</b></p>
+                <div class="one-cell"><input type="number" id="venergyc3" value="0"></input><button id="addone" onclick="addenergyc3()">+</button><button id="subone" onclick="subenergyc3()">-</button></div>
+            </div>
+        </div>
+        <hr style="margin: 0px;padding: 0px;height: 2px;background: aqua;"/>
+        <div id="result-div">
+            <div id="r-div"><b>RESULT: </b><p id="total"></p></div>
+            <div class="d-p-container">
+                <button id="btn-show">CHOOSE CORRECT RULE TO CALCULATE</button>
+                <div class="con-container">
+                    <button onclick="allresultr1()">RULE + +</button>
+                    <button onclick="allresultr2()">RULE - -</button>
+                    <button onclick="allresultr3()">RULE * *</button>
+                    <button onclick="allresultr4()">RULE / /</button>
+                    <button onclick="allresultr5()">RULE + -</button>
+                    <button onclick="allresultr6()">RULE + *</button>
+                    <button onclick="allresultr7()">RULE + /</button>
+                    <button onclick="allresultr8()">RULE - +</button>
+                    <button onclick="allresultr9()">RULE * +</button>
+                    <button onclick="allresultr10()">RULE / +</button>
+                    <button onclick="allresultr11()">RULE - *</button>
+                    <button onclick="allresultr12()">RULE - /</button>
+                    <button onclick="allresultr13()">RULE * -</button>
+                    <button onclick="allresultr14()">RULE / -</button>
+                    <button onclick="allresultr15()">RULE * /</button>
+                    <button onclick="allresultr16()">RULE / *</button>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; color: rgb(23, 32, 32);box-shadow: 2px 2px 2px rgb(80, 60, 60);">MADE BY IBRAHIM SALISU CPS &copy; | 2021</div>
+    </body>
+</html>
